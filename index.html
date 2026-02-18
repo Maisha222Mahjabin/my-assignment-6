@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart - Your One-Stop Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">SwiftCart</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Best Collection For You</h1>
+                <p class="hero-subtitle">Discover the latest trends in fashion, electronics, and more. Shop with
+              <br>    confidence and style at SwiftCart.</p>
+                <button class="hero-btn" id="shopNowBtn">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="category-buttons" id="categoryButtons">
+                <button class="category-btn active" data-category="all">All</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading products...</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending" id="trending">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-grid" id="trendingGrid">
+                <!-- Trending products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SwiftCart</h3>
+                    <p>Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery, and excellent support.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#shipping">Shipping</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#warranty">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates on new products and exclusive offers</p>
+                    <form class="footer-newsletter-form" id="footerNewsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SwiftCart. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <span class="modal-close" id="cartClose">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
